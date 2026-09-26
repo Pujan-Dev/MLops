@@ -1,0 +1,253 @@
+{
+  "prompt_version": "v3",
+  "config": {
+    "prompt_version": "v3",
+    "model_name": "local-policy-v3",
+    "temperature": 0.0,
+    "top_k": 5,
+    "chunk_size": 500,
+    "max_iterations": 5
+  },
+  "n_tests": 12,
+  "n_passed": 12,
+  "pass_rate": 1.0,
+  "task_completion_score": 1.0,
+  "correctness_avg": 0.9875,
+  "preservation_avg": 0.7275,
+  "avg_tokens": 2333.5,
+  "avg_latency_s": 0.0,
+  "evidently": {
+    "used": false,
+    "report_path": null,
+    "detail": "evidently 0.7.23 installed; wrote evidently_input_v3.csv. Deterministic LLM-as-a-judge used (Correctness + Information Preservation); Evidently input CSV kept for audit."
+  },
+  "rows": [
+    {
+      "id": "refund",
+      "question": "What is the refund policy?",
+      "golden": "Returns are allowed within 30 days of purchase with a receipt. Refunds go to the original payment method.",
+      "expect": [
+        "doc1"
+      ],
+      "response": "Based on doc1: The refund policy allows returns within 30 days of purchase with a receipt. Refunds are issued to the original payment method.",
+      "correctness": 1.0,
+      "preservation": 0.762,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2381,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754858132_what_is_the_refund_policy.json"
+    },
+    {
+      "id": "shipping",
+      "question": "How long does standard shipping take?",
+      "golden": "Standard shipping takes 3-5 business days. Express is 1-2 days. Free shipping over $50.",
+      "expect": [
+        "doc2"
+      ],
+      "response": "Based on doc2: Shipping takes 3-5 business days for standard delivery. Express shipping delivers in 1-2 business days. Shipping is free over $50.",
+      "correctness": 1.0,
+      "preservation": 0.78,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2483,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754858603_how_long_does_standard_shipping_take.json"
+    },
+    {
+      "id": "password",
+      "question": "How do I reset my password?",
+      "golden": "Go to Settings > Account > Reset password. A reset link is emailed and expires in 24 hours.",
+      "expect": [
+        "doc3"
+      ],
+      "response": "Based on doc3: To reset your password, go to Settings > Account > Reset password. A reset link is emailed and expires in 24 hours.",
+      "correctness": 1.0,
+      "preservation": 0.821,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2369,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754859050_how_do_i_reset_my_password.json"
+    },
+    {
+      "id": "library",
+      "question": "What are the library opening hours?",
+      "golden": "Open 9am to 8pm Monday to Friday, 10am to 4pm Saturday. Closed Sunday.",
+      "expect": [
+        "doc4"
+      ],
+      "response": "Based on doc4: The library opening hours are 9am to 8pm Monday to Friday, and 10am to 4pm on Saturday. Closed on Sunday.",
+      "correctness": 1.0,
+      "preservation": 0.667,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2456,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754859522_what_are_the_library_opening_hours.json"
+    },
+    {
+      "id": "warranty",
+      "question": "What does the warranty cover?",
+      "golden": "Warranty covers manufacturing defects for 12 months. It does not cover accidental or water damage.",
+      "expect": [
+        "doc6"
+      ],
+      "response": "Based on doc6: Warranty covers manufacturing defects for 12 months. It does not cover accidental damage or water damage.",
+      "correctness": 1.0,
+      "preservation": 0.882,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2370,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754859994_what_does_the_warranty_cover.json"
+    },
+    {
+      "id": "support",
+      "question": "How do I contact support?",
+      "golden": "Contact support@example.com or call 555-0100 between 9am and 5pm on weekdays.",
+      "expect": [
+        "doc7"
+      ],
+      "response": "Based on doc7: Contact support at support@example.com or call 555-0100 between 9am and 5pm on weekdays.",
+      "correctness": 1.0,
+      "preservation": 0.848,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2352,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754860410_how_do_i_contact_support.json"
+    },
+    {
+      "id": "venv",
+      "question": "How do I create a Python virtual environment?",
+      "golden": "Create one with python -m venv env and activate it before installing packages.",
+      "expect": [
+        "doc8"
+      ],
+      "response": "Based on doc8: Python virtual environments isolate dependencies. Create one with python -m venv env and activate it before installing packages.",
+      "correctness": 1.0,
+      "preservation": 0.765,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2404,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754860827_how_do_i_create_a_python_virtual_environ.json"
+    },
+    {
+      "id": "rag",
+      "question": "What is RAG in machine learning?",
+      "golden": "RAG combines retrieval with generation for grounded answers.",
+      "expect": [
+        "doc5"
+      ],
+      "response": "Based on doc5: Machine learning models include regression, classification, and clustering. RAG combines retrieval with generation for grounded answers.",
+      "correctness": 1.0,
+      "preservation": 0.593,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2397,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754861246_what_is_rag_in_machine_learning.json"
+    },
+    {
+      "id": "paraphrase-refund",
+      "question": "How do I get my money back?",
+      "golden": "Returns are allowed within 30 days of purchase with a receipt. Refunds go to the original payment method.",
+      "expect": [
+        "doc1"
+      ],
+      "response": "Based on doc1: The refund policy allows returns within 30 days of purchase with a receipt. Refunds are issued to the original payment method.",
+      "correctness": 1.0,
+      "preservation": 0.762,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2382,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754861669_how_do_i_get_my_money_back.json"
+    },
+    {
+      "id": "paraphrase-password",
+      "question": "Forgotten credentials, locked out \u2014 need entry again",
+      "golden": "Go to Settings > Account > Reset password. A reset link is emailed and expires in 24 hours.",
+      "expect": [
+        "doc3"
+      ],
+      "response": "Based on doc3: To reset your password, go to Settings > Account > Reset password. A reset link is emailed and expires in 24 hours.",
+      "correctness": 1.0,
+      "preservation": 0.821,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2400,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754862127_forgotten_credentials_locked_out_need_en.json"
+    },
+    {
+      "id": "vague",
+      "question": "Hi",
+      "golden": "Could you clarify your question? Please provide more details so I can help.",
+      "expect": "clarify",
+      "response": "Could you clarify your question? V3: vague query, need clarification.",
+      "correctness": 1.0,
+      "preservation": 0.435,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 1,
+      "tool_calls": 0,
+      "tokens": 1473,
+      "latency_s": 0.0,
+      "termination_reason": "clarified",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754862471_hi.json"
+    },
+    {
+      "id": "compositional",
+      "question": "What is your return window for defective headphones with water damage?",
+      "golden": "Returns are allowed within 30 days of purchase. Warranty covers manufacturing defects for 12 months but does not cover water damage.",
+      "expect": [
+        "doc1",
+        "doc6"
+      ],
+      "response": "Based on doc1: The refund policy allows returns within 30 days of purchase with a receipt. Refunds are issued to the original payment method. Based on doc6: Warranty covers manufacturing defects for 12 months. It does not cover accidental damage or water damage.",
+      "correctness": 0.85,
+      "preservation": 0.594,
+      "passed": true,
+      "method": "deterministic-keyword-f1",
+      "iterations": 2,
+      "tool_calls": 1,
+      "tokens": 2535,
+      "latency_s": 0.0,
+      "termination_reason": "answered",
+      "trace_path": "/mnt/e3c886f8-061f-4a8e-b92f-e2ee05805660/fuse_machine/mlops/track-2/agentic-mlops/traces/trace_v3_20260926T065754862883_what_is_your_return_window_for_defective.json"
+    }
+  ]
+}

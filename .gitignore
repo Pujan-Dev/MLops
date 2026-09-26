@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments (uv uses .venv)
+.venv/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# MLflow local store (keep folder, ignore large contents except .gitkeep)
+mlruns/
+!mlruns/.gitkeep
+
+# Models / data / reports generated locally (keep .gitkeep)
+models/*
+!models/.gitkeep
+data/*.csv
+reports/*.html
+artifacts/*
+!artifacts/.gitkeep
+
+# Env / secrets
+.env
+*.env
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+w16

@@ -1,0 +1,52 @@
+{
+  "answer": "Based on general knowledge: I believe this is covered, but I could not verify it in the documents.",
+  "iterations": 2,
+  "tool_calls": 1,
+  "tokens": 764,
+  "latency_s": 0.0,
+  "history": [
+    {
+      "query": "Hi",
+      "n_results": 0,
+      "error": null
+    }
+  ],
+  "clarified": false,
+  "prompt_version": "v1",
+  "config": {
+    "prompt_version": "v1",
+    "model_name": "local-policy-v1",
+    "temperature": 0.7,
+    "top_k": 3,
+    "chunk_size": 300,
+    "max_iterations": 2
+  },
+  "trace": [
+    {
+      "step_number": 1,
+      "tool_selected": "rag_search",
+      "tool_arguments": {
+        "query": "Hi",
+        "top_k": 3
+      },
+      "raw_tool_result": {
+        "ok": true,
+        "results": []
+      },
+      "reasoning": "V1: initial search with raw question.",
+      "decision": "continue"
+    },
+    {
+      "step_number": 2,
+      "tool_selected": "none (answer)",
+      "tool_arguments": {},
+      "raw_tool_result": {
+        "evidence_used": []
+      },
+      "reasoning": "V1: answer with top result (best=0); always answer.",
+      "decision": "stop"
+    }
+  ],
+  "total_iterations": 2,
+  "termination_reason": "answered"
+}

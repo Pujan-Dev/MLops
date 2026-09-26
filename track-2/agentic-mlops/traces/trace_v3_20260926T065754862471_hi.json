@@ -1,0 +1,30 @@
+{
+  "answer": "Could you clarify your question? V3: vague query, need clarification.",
+  "iterations": 1,
+  "tool_calls": 0,
+  "tokens": 1473,
+  "latency_s": 0.0,
+  "history": [],
+  "clarified": true,
+  "prompt_version": "v3",
+  "config": {
+    "prompt_version": "v3",
+    "model_name": "local-policy-v3",
+    "temperature": 0.0,
+    "top_k": 5,
+    "chunk_size": 500,
+    "max_iterations": 5
+  },
+  "trace": [
+    {
+      "step_number": 1,
+      "tool_selected": "none (clarify)",
+      "tool_arguments": {},
+      "raw_tool_result": {},
+      "reasoning": "V3: vague query, need clarification.",
+      "decision": "stop"
+    }
+  ],
+  "total_iterations": 1,
+  "termination_reason": "clarified"
+}

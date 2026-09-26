@@ -1,0 +1,50 @@
+{
+  "answer": "Could you clarify your question? V2: vague query, need clarification.",
+  "iterations": 2,
+  "tool_calls": 1,
+  "tokens": 1427,
+  "latency_s": 0.0,
+  "history": [
+    {
+      "query": "hi",
+      "n_results": 0,
+      "error": null
+    }
+  ],
+  "clarified": true,
+  "prompt_version": "v2",
+  "config": {
+    "prompt_version": "v2",
+    "model_name": "local-policy-v2",
+    "temperature": 0.3,
+    "top_k": 5,
+    "chunk_size": 300,
+    "max_iterations": 3
+  },
+  "trace": [
+    {
+      "step_number": 1,
+      "tool_selected": "rag_search",
+      "tool_arguments": {
+        "query": "hi",
+        "top_k": 5
+      },
+      "raw_tool_result": {
+        "ok": true,
+        "results": []
+      },
+      "reasoning": "V2: weak evidence (best=0); retry with keywords.",
+      "decision": "continue"
+    },
+    {
+      "step_number": 2,
+      "tool_selected": "none (clarify)",
+      "tool_arguments": {},
+      "raw_tool_result": {},
+      "reasoning": "V2: vague query, need clarification.",
+      "decision": "stop"
+    }
+  ],
+  "total_iterations": 2,
+  "termination_reason": "clarified"
+}
